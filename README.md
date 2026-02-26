@@ -62,7 +62,7 @@ strategic-oracle/
 
 **1. Clone the repo**
 ```
-git clone https://github.com/yourusername/strategic-oracle.git
+git clone https://github.com/najeebullahii/Strategic-Oracle__Causal-AI-Decision-Engine.git
 cd strategic-oracle
 ```
 
