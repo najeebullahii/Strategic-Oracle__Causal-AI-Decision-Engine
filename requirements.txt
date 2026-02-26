@@ -1,8 +1,9 @@
-pandas==2.2.2
-numpy==1.26.4
-scikit-learn==1.4.2
+pandas
+numpy
+scikit-learn
 dowhy==0.11.1
-networkx==3.3
-streamlit==1.35.0
-plotly==5.22.0
+networkx
+streamlit==1.41.1
+plotly
 altair==4.2.2
+protobuf==3.20.3
