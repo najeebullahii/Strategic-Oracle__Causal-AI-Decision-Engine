@@ -6,8 +6,8 @@ Built on Microsoft's DoWhy library using the UCI Bank Marketing dataset (45,211 
 
 **Live dashboard:** [strategic-oracle.streamlit.app](https://strategic-oracle.streamlit.app)
 <p align="center">
-  <img src="assets/screenshot-summary.png" width="45%" />
-  <img src="assets/screenshot-bias.png" width="45%" />
+  <img src="assets/screenshot-summary.png" width="55%" />
+  <img src="assets/screenshot-bias.png" width="55%" />
 </p>
 
 ---
