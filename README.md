@@ -6,7 +6,7 @@ Built on Microsoft's DoWhy library using the UCI Bank Marketing dataset (45,211 
 
 **Live dashboard:** [strategic-oracle.streamlit.app](https://strategic-oracle.streamlit.app)
 ![Executive Summary](screenshot-summary.png)
-![Bias Discovery](screenshot-bias.png)
+![Bias Discovery](screenshot-bias)
 ---
 
 ## The Problem
