@@ -4,7 +4,7 @@ A causal inference project that goes beyond standard predictive analysis to answ
 
 Built on Microsoft's DoWhy library using the UCI Bank Marketing dataset (45,211 records). The project identifies, estimates, and validates the true causal effect of cellular contact on subscription probability — then wraps the findings in an interactive Streamlit dashboard designed for business decision-making.
 
-**Live dashboard:** [strategic-oracle.streamlit.app]([https://strategic-oracle.streamlit.app](https://strategic-oraclecausal-ai-decision-engine-3vpjjayi3mpvjkrd5rtk.streamlit.app/)
+**Live dashboard:** [strategic-oracle.streamlit.app]([https://strategic-oracle.streamlit.app](https://strategic-oraclecausal-ai-decision-engine-3vpjjayi3mpvjkrd5rtk.streamlit.app/)]
 <p align="center">
   <img src="assets/screenshot-summary.png" width="75%" />
   <img src="assets/screenshot-bias.png" width="75%" />
