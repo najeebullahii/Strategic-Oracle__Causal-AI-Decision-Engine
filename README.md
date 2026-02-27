@@ -92,7 +92,14 @@ streamlit run app.py
 **Why DoWhy:** Most causal inference libraries either require strong parametric assumptions or don't provide built-in validation. DoWhy combines graph-based identification with multiple estimation methods and — critically — a refutation framework that makes it possible to stress-test the finding systematically.
 
 ---
+## Pipeline
 
+1. Data Engineering — clean and encode the raw UCI dataset
+2. Causal Modeling — define the structural causal graph, estimate the ATE
+3. Refutation — stress-test the result with four independent DoWhy tests
+4. Strategic Simulation — translate the finding into an interactive ROI dashboard
+
+---
 ## Dashboard
 
 The Streamlit dashboard has four pages:
@@ -101,7 +108,10 @@ The Streamlit dashboard has four pages:
 
 **Bias Discovery** — visual breakdown of where the 2.33% bias comes from and why demographic confounders inflate the raw difference.
 
-**What-If Simulator** — input campaign size, revenue per subscription, and call costs to get a live Proceed/Hold recommendation based on the true causal economics. Includes a profit projection chart across campaign scales.
+**What-If Simulator** — adjust target customer volume, revenue per subscription, 
+and call costs for both contact methods. The engine calculates both scenarios side 
+by side and outputs a live Proceed or Hold recommendation based on whether the 
+causal strategy generates net profit above the baseline.
 
 **Validation Tests** — detailed results from all four refutation tests with p-values, ATE shifts, and explanations of what each test proves.
 
