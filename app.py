@@ -210,7 +210,7 @@ refutation_results = {
 
 @st.cache_data
 def load_data():
-    return pd.read_csv(r"C:\Users\Najib\Documents\Najib's Projects\Causal AI decision engine\bank-full-cleaned.csv")
+    return pd.read_csv("bank-full-cleaned.csv")
 
 df = load_data()
 total_customers = len(df)
