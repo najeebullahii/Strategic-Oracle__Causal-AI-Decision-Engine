@@ -2,7 +2,7 @@
 
 A causal inference project that goes beyond standard predictive analysis to answer the question most data analysts skip: not just *what* predicts a customer subscribing to a term deposit, but *what actually causes it*.
 
-Built on Microsoft's DoWhy library using the UCI Bank Marketing dataset (45,211 records). The project identifies, estimates, and validates the true causal effect of cellular contact on subscription probability — then wraps the findings in an interactive Streamlit dashboard designed for business decision-making.
+Built on Microsoft's DoWhy library using the UCI Bank Marketing dataset (45,211 records). The project identifies, estimates, and validates the true causal effect of cellular contact on subscription probability then wraps the findings in an interactive Streamlit dashboard designed for business decision-making.
 
 **Live dashboard:** [https://strategic-oracle.streamlit.app](https://strategic-oraclecausal-ai-decision-engine-3vpjjayi3mpvjkrd5rtk.streamlit.app/)
 
@@ -10,9 +10,9 @@ Built on Microsoft's DoWhy library using the UCI Bank Marketing dataset (45,211 
 
 ## The Problem
 
-Standard analysis of this dataset shows that customers contacted via cellular subscribe at 14.92%, compared to 5.78% for other contact methods — a gap of 9.14%. A typical report would stop there and recommend increasing cellular outreach.
+Standard analysis of this dataset shows that customers contacted via cellular subscribe at 14.92%, compared to 5.78% for other contact methods a gap of 9.14%. A typical report would stop there and recommend increasing cellular outreach.
 
-The problem is that this gap is partly driven by who owns a cellular phone, not the call itself. Younger, wealthier, more financially active customers are more likely to have a cellular number on file — and those same customers are also more likely to invest in a term deposit regardless of how they were contacted. Acting on the raw 9.14% figure overstates the true effect and leads to budget being allocated based on correlation, not causation.
+The problem is that this gap is partly driven by who owns a cellular phone, not the call itself. Younger, wealthier, more financially active customers are more likely to have a cellular number on file and those same customers are also more likely to invest in a term deposit regardless of how they were contacted. Acting on the raw 9.14% figure overstates the true effect and leads to budget being allocated based on correlation, not causation.
 
 ---
 
@@ -20,7 +20,7 @@ The problem is that this gap is partly driven by who owns a cellular phone, not 
 
 After controlling for demographic confounders using propensity score stratification, the true Average Treatment Effect (ATE) of cellular contact is **6.81%**.
 
-The remaining 2.33% was selection bias — customers who would have subscribed anyway. This distinction matters when projecting campaign ROI. A bank planning a 50,000-customer campaign using the raw 9.14% figure would overestimate subscriptions by over 1,000 and misallocate a significant portion of its calling budget.
+The remaining 2.33% was selection bias, customers who would have subscribed anyway. This distinction matters when projecting campaign ROI. A bank planning a 50,000-customer campaign using the raw 9.14% figure would overestimate subscriptions by over 1,000 and misallocate a significant portion of its calling budget.
 
 ---
 
@@ -85,11 +85,11 @@ streamlit run app.py
 
 **Dataset:** UCI Bank Marketing — 45,211 customer records from a Portuguese bank's telemarketing campaigns. Target variable is whether the customer subscribed to a term deposit.
 
-**Causal graph (DAG):** Built using networkx. Confounders — age, job, education, marital status, account balance, housing loan, personal loan, and credit default — are connected to both treatment and outcome. Previous campaign history (poutcome, was_previously_contacted) connects to outcome only. Post-treatment variables (call duration, campaign count, contact timing) were deliberately excluded to avoid collider bias.
+**Causal graph (DAG):** Built using networkx. Confounders — age, job, education, marital status, account balance, housing loan, personal loan, and credit default are connected to both treatment and outcome. Previous campaign history (poutcome, was_previously_contacted) connects to outcome only. Post-treatment variables (call duration, campaign count, contact timing) were deliberately excluded to avoid collider bias.
 
 **Estimation method:** Backdoor criterion with propensity score stratification. Customers are grouped by their likelihood of being contacted via cellular based on demographics. Within each group, customers are comparable, so the remaining difference in subscription rates reflects the causal effect of the call itself.
 
-**Why DoWhy:** Most causal inference libraries either require strong parametric assumptions or don't provide built-in validation. DoWhy combines graph-based identification with multiple estimation methods and — critically — a refutation framework that makes it possible to stress-test the finding systematically.
+**Why DoWhy:** Most causal inference libraries either require strong parametric assumptions or don't provide built-in validation. DoWhy combines graph-based identification with multiple estimation methods and critically a refutation framework that makes it possible to stress-test the finding systematically.
 
 ---
 ## Pipeline
