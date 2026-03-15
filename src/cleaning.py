@@ -1,10 +1,8 @@
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 
-input_path  = r"C:\Users\Najib\Documents\Najib's Projects\Causal AI decision engine\bank-full.csv"
-output_path = r"C:\Users\Najib\Documents\Najib's Projects\Causal AI decision engine\bank-full-cleaned.csv"
-
-
+input_path  = "data/bank-full.csv"
+output_path = "data/bank-full-cleaned.csv"
 def clean_data():
 
     # load the dataset — it uses semicolons instead of commas as separators
