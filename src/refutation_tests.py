@@ -4,7 +4,7 @@ from dowhy import CausalModel
 import warnings
 warnings.filterwarnings('ignore')
 
-data_path    = r"C:\Users\Najib\Documents\Najib's Projects\Causal AI decision engine\bank-full-cleaned.csv"
+data_path    = "data/bank-full-cleaned.csv"
 original_ate = 0.0681
 
 
